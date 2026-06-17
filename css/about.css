@@ -1,0 +1,375 @@
+/* css/about.css */
+
+/* About Hero Section */
+.about-hero {
+    position: relative;
+    padding: 8rem 4rem 4rem;
+    text-align: center;
+    background-color: var(--bg-light-beige);
+    border-bottom: 1px solid rgba(43, 61, 52, 0.1);
+}
+
+.about-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 6rem 4rem;
+    background-color: var(--bg-beige);
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.story-image {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Why Choose Us Grid */
+.why-choose-us {
+    padding: 6rem 4rem;
+    background-color: var(--text-white);
+}
+
+.why-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.why-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-green);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.why-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--bg-light-beige);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-green);
+}
+
+.why-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.why-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Our Team Section */
+.our-team {
+    padding: 6rem 4rem;
+    background-color: var(--bg-light-beige);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: var(--text-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-img {
+    height: 300px;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 1.5rem;
+}
+
+.team-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--primary-green);
+    margin-bottom: 0.25rem;
+}
+
+.team-role {
+    color: var(--primary-yellow);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Core Values */
+.core-values {
+    padding: 6rem 4rem;
+    background-color: var(--text-white);
+    text-align: center;
+}
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.value-card {
+    padding: 2rem;
+    border: 1px solid rgba(43, 61, 52, 0.1);
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+.value-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.value-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.value-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Company Timeline */
+.timeline-section {
+    padding: 6rem 4rem;
+    background-color: var(--bg-beige);
+}
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-green);
+    transform: translateX(-50%);
+    opacity: 0.2;
+}
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.timeline-content {
+    width: 45%;
+    background: var(--text-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.timeline-year {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-yellow);
+    color: var(--text-dark);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 4px solid var(--bg-beige);
+}
+.timeline-content h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+.timeline-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Sustainability Commitment */
+.sustainability {
+    padding: 6rem 4rem;
+    background-color: var(--primary-green);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.sustain-content {
+    flex: 1;
+}
+.sustain-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-yellow);
+    margin-bottom: 1.5rem;
+}
+.sustain-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.8);
+}
+.sustain-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.stat {
+    text-align: center;
+}
+.stat span {
+    display: block;
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+}
+.stat label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sustain-image {
+    flex: 1;
+}
+.sustain-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .our-story {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .about-hero, .our-story, .why-choose-us, .our-team {
+        padding: 4rem 2rem;
+    }
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .values-grid, .timeline-grid, .stats-grid { gap: 1.5rem; }
+}
+@media (max-width: 768px) {
+    .about-hero-content { flex-direction: column; text-align: center; }
+    .values-grid, .timeline-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-hero h1 { font-size: 2.5rem; }
+    
+    /* Timeline Mobile Fixes */
+    .timeline::before { display: none; }
+    .timeline-item, .timeline-item:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 2.5rem;
+    }
+    .timeline-year {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    .timeline-content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 425px) {
+    .stats-grid { grid-template-columns: 1fr; }
+}

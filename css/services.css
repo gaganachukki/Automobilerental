@@ -1,0 +1,268 @@
+/* css/services.css */
+
+.services-page-header {
+    text-align: center;
+    padding: 6rem 2rem 3rem;
+    background-color: var(--bg-light-beige);
+}
+
+.services-page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.services-page-header p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-container {
+    padding: 6rem 4rem;
+    background-color: var(--bg-beige);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: var(--text-white);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-bottom-color: var(--primary-yellow);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-light-beige);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-green);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    background-color: var(--primary-green);
+    color: var(--primary-yellow);
+}
+
+.service-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-link {
+    display: inline-block;
+    color: var(--primary-green);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-yellow);
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.service-link:hover {
+    color: var(--primary-yellow);
+}
+
+/* Corporate Partnerships */
+.corporate-partnerships {
+    background-color: var(--primary-green);
+    color: var(--text-white);
+    padding: 6rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.corp-content {
+    flex: 1;
+}
+.corp-content h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-yellow);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.corp-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.corp-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+.corp-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.corp-features li svg {
+    color: var(--primary-yellow);
+    flex-shrink: 0;
+}
+.corp-image {
+    flex: 1;
+}
+.corp-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Premium Add-On Options */
+.premium-addons {
+    padding: 6rem 4rem;
+    background-color: var(--text-white);
+    text-align: center;
+}
+.addons-header h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.addon-card {
+    border: 1px solid rgba(43, 61, 52, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.addon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.addon-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-light-beige);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-green);
+}
+.addon-card h4 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+.addon-price {
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+/* The Chauffeur Experience */
+.chauffeur-experience {
+    padding: 6rem 4rem;
+    background-color: var(--bg-beige);
+}
+.chauffeur-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.chauffeur-header h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-green);
+    font-size: 2.2rem;
+}
+.experience-steps {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.step {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+.step h4 {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.step p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-container {
+        padding: 4rem 2rem;
+    }
+    .services-page-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .services-grid { gap: 1.5rem; }
+}
+@media (max-width: 768px) {
+    .services-grid, .addons-grid, .steps-grid { grid-template-columns: 1fr; }
+    .corporate-content { flex-direction: column; text-align: center; gap: 2rem; }
+    .corporate-image, .corporate-text { width: 100%; }
+    .services-hero h1 { font-size: 2.5rem; }
+}
