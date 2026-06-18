@@ -359,6 +359,7 @@
     .values-grid, .timeline-grid, .stats-grid { gap: 1.5rem; }
 }
 @media (max-width: 768px) {
+    .about-hero { background-attachment: scroll !important; }
     .about-hero-content { flex-direction: column; text-align: center; }
     .values-grid, .timeline-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }

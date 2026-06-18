@@ -278,6 +278,7 @@
     .services-grid { gap: 1.5rem; }
 }
 @media (max-width: 768px) {
+    .services-page-header { background-attachment: scroll !important; }
     .services-grid, .addons-grid, .steps-grid { grid-template-columns: 1fr; }
     .corporate-content { flex-direction: column; text-align: center; gap: 2rem; }
     .corporate-image, .corporate-text { width: 100%; }

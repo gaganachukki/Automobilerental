@@ -314,6 +314,7 @@ textarea.form-control {
     .contact-wrapper { flex-direction: column; }
 }
 @media (max-width: 768px) {
+    .contact-page-header { background-attachment: scroll !important; }
     .contact-container { padding: 3rem 1.5rem; }
     .contact-wrapper { flex-direction: column; border-radius: 12px; }
     .contact-info, .contact-form-section { padding: 2rem; width: 100%; }

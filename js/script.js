@@ -48,7 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Start observing elements
     elementsToAnimate.forEach(el => {
-        observer.observe(el);
+        // Fallback for mobile: immediately reveal to avoid IntersectionObserver bugs 
+        // when body has overflow-x: hidden on iOS/Chromium
+        if (window.innerWidth <= 768) {
+            el.classList.add('reveal-active');
+        } else {
+            observer.observe(el);
+        }
     });
 
     // 2. Add subtle hover classes to any missing interactive elements

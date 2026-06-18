@@ -333,11 +333,13 @@
     .blog-grid { gap: 1.5rem; }
 }
 @media (max-width: 768px) {
+    .blog-page-header { background-attachment: scroll !important; }
     .blog-grid, .category-grid { grid-template-columns: 1fr; }
     .featured-post-card { flex-direction: column; }
     .featured-img, .featured-content { width: 100%; }
     .featured-img { height: 250px; }
     .blog-hero h1 { font-size: 2.5rem; }
-    .newsletter-content form { flex-direction: column; }
-    .newsletter-content button { width: 100%; justify-content: center; }
+    .newsletter-promo { padding: 3rem 1.5rem; }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-input, .newsletter-btn { width: 100%; box-sizing: border-box; }
 }

@@ -3,14 +3,14 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling */
-    height: 100vh;
+    overflow-y: auto;
+    min-height: 100vh;
     background-color: var(--bg-light-beige);
 }
 
 .register-layout {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Page Load Animations */
@@ -136,7 +136,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 2.5rem; /* Reduced */
+    padding: 6rem 2.5rem 2.5rem 2.5rem; /* Increased top padding to prevent overlap */
     justify-content: center;
 }
 

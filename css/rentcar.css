@@ -282,7 +282,7 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .rental-fleet { padding: 3rem 1rem; }
-    .rental-page-header { padding: 4rem 1rem 2rem; }
+    .rental-page-header { padding: 4rem 1rem 2rem; background-attachment: scroll !important; }
     
     .rental-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     
