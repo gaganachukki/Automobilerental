@@ -28,10 +28,12 @@
                 <span class="dash-nav-title">Admin Portal</span>
             </div>
             <div class="dash-nav-right">
-                <div class="dash-user-profile">
-                    <div class="dash-avatar">AD</div>
-                    <span class="dash-user-name">System Admin</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                <div class="dash-user-profile admin-profile-layout">
+                    <div class="dash-avatar" id="navAvatar">AD</div>
+                    <div class="admin-profile-details">
+                        <span class="dash-user-name" id="navUserName">System Admin</span>
+                        <span class="dash-user-email" id="navUserEmail">admin@example.com</span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -39,33 +41,42 @@
         <div class="dash-body">
             <!-- Sidebar -->
             <aside class="dash-sidebar">
+                <button class="dash-close-menu-btn" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
                 <ul class="dash-nav-list">
                     <li>
-                        <a href="#" class="dash-nav-item active">
+                        <a href="#" class="dash-nav-item active" data-target="dashboard">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                             Dashboard
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="dash-nav-item">
+                        <a href="#" class="dash-nav-item" data-target="manage-cars">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                             Manage Cars
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="dash-nav-item">
+                        <a href="#" class="dash-nav-item" data-target="manage-bookings">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                             Manage Bookings
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="dash-nav-item">
+                        <a href="#" class="dash-nav-item" data-target="users">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                             Users
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="dash-nav-item">
+                        <a href="#" class="dash-nav-item" data-target="reports">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="dash-nav-item" data-target="settings">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                             Settings
                         </a>
@@ -82,7 +93,8 @@
 
             <!-- Main Content Area -->
             <main class="dash-main">
-                <div class="dash-header animate-in delay-1">
+                <div id="dashboard" class="tab-pane active">
+                    <div class="dash-header animate-in delay-1">
                     <h1>Admin Overview</h1>
                     <p>System performance and metrics</p>
                 </div>
@@ -126,6 +138,21 @@
                             <h4>Total Users</h4>
                             <h2>1,250</h2>
                             <p>+45 this week</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid animate-in delay-2">
+                    <div class="chart-container">
+                        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg> Revenue Overview</h3>
+                        <div class="canvas-wrapper">
+                            <canvas id="adminRevenueChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg> Fleet by Category</h3>
+                        <div class="canvas-wrapper">
+                            <canvas id="adminFleetChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -267,7 +294,223 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
+
+                <!-- Manage Cars Tab -->
+                <div id="manage-cars" class="tab-pane">
+                    <div class="dash-header">
+                        <h1>Manage Cars</h1>
+                        <p>View and manage the rental fleet</p>
+                    </div>
+                    <div class="dash-section">
+                        <div style="margin-bottom: 1rem;">
+                            <button type="button" class="btn-primary">Add New Car</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Vehicle</th>
+                                        <th>Category</th>
+                                        <th>License Plate</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Range Rover Velar</td>
+                                        <td>Luxury SUV</td>
+                                        <td>KA-01-XY-1234</td>
+                                        <td><span class="status-badge active">Rented</span></td>
+                                        <td><button class="action-btn">Edit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mercedes S-Class</td>
+                                        <td>Luxury Sedan</td>
+                                        <td>MH-02-AB-9876</td>
+                                        <td><span class="status-badge pending">Available</span></td>
+                                        <td><button class="action-btn">Edit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Toyota Fortuner</td>
+                                        <td>SUV</td>
+                                        <td>DL-04-CD-5678</td>
+                                        <td><span class="status-badge pending">Available</span></td>
+                                        <td><button class="action-btn">Edit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>BMW X5</td>
+                                        <td>Luxury SUV</td>
+                                        <td>TN-09-EF-3456</td>
+                                        <td><span class="status-badge completed">Maintenance</span></td>
+                                        <td><button class="action-btn">Edit</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Bookings Tab -->
+                <div id="manage-bookings" class="tab-pane">
+                    <div class="dash-header">
+                        <h1>Manage Bookings</h1>
+                        <p>Approve or modify user bookings</p>
+                    </div>
+                    <div class="dash-section">
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Booking ID</th>
+                                        <th>User</th>
+                                        <th>Vehicle</th>
+                                        <th>Dates</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#B-1001</td>
+                                        <td>Arjun Verma</td>
+                                        <td>Range Rover Velar</td>
+                                        <td>18 Jun - 22 Jun</td>
+                                        <td><span class="status-badge active">Confirmed</span></td>
+                                        <td><button class="action-btn">Manage</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#B-1002</td>
+                                        <td>Priya Sharma</td>
+                                        <td>Mercedes S-Class</td>
+                                        <td>20 Jun - 21 Jun</td>
+                                        <td><span class="status-badge pending">Pending</span></td>
+                                        <td><button class="action-btn">Manage</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#B-1003</td>
+                                        <td>Rahul Desai</td>
+                                        <td>Toyota Fortuner</td>
+                                        <td>10 May - 12 May</td>
+                                        <td><span class="status-badge completed">Completed</span></td>
+                                        <td><button class="action-btn">Manage</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users Tab -->
+                <div id="users" class="tab-pane">
+                    <div class="dash-header">
+                        <h1>Users</h1>
+                        <p>Manage registered accounts</p>
+                    </div>
+                    <div class="dash-section">
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Registered</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Arjun Verma</td>
+                                        <td>arjun.verma@example.com</td>
+                                        <td>01 Jan 2026</td>
+                                        <td>Customer</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>System Admin</td>
+                                        <td>admin@example.com</td>
+                                        <td>15 Dec 2025</td>
+                                        <td>Admin</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Priya Sharma</td>
+                                        <td>priya.s@example.com</td>
+                                        <td>12 Mar 2026</td>
+                                        <td>Customer</td>
+                                        <td><span class="status-badge active">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rahul Desai</td>
+                                        <td>rahul.d@example.com</td>
+                                        <td>05 Apr 2026</td>
+                                        <td>Customer</td>
+                                        <td><span class="status-badge completed">Banned</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reports Tab -->
+                <div id="reports" class="tab-pane">
+                    <div class="dash-header">
+                        <h1>Reports & Analytics</h1>
+                        <p>Download system performance and revenue reports</p>
+                    </div>
+                    <div class="dash-section" style="max-width: 600px;">
+                        <div style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <h4 style="margin-bottom: 0.2rem;">Monthly Revenue Report</h4>
+                                <p style="color:var(--text-muted); font-size:0.9rem;">Generated on 1st of every month</p>
+                            </div>
+                            <button class="btn-sm" style="background-color: var(--primary-green); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer;">Download PDF</button>
+                        </div>
+                        <div style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <h4 style="margin-bottom: 0.2rem;">Fleet Usage Statistics</h4>
+                                <p style="color:var(--text-muted); font-size:0.9rem;">Real-time analysis of car popularity</p>
+                            </div>
+                            <button class="btn-sm" style="background-color: var(--primary-green); color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer;">View Online</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div id="settings" class="tab-pane">
+                    <div class="dash-header">
+                        <h1>System Settings</h1>
+                        <p>Configure platform preferences</p>
+                    </div>
+                    <div class="dash-section" style="max-width: 600px;">
+                        <div class="settings-toggle">
+                            <div>
+                                <h4>New User Registration</h4>
+                                <p style="color:var(--text-muted); font-size:0.9rem;">Allow new users to sign up</p>
+                            </div>
+                            <div class="toggle-switch active"></div>
+                        </div>
+                        <div class="settings-toggle">
+                            <div>
+                                <h4>Maintenance Mode</h4>
+                                <p style="color:var(--text-muted); font-size:0.9rem;">Disable public bookings temporarily</p>
+                            </div>
+                            <div class="toggle-switch"></div>
+                        </div>
+                        <div class="settings-toggle">
+                            <div>
+                                <h4>Admin Notifications</h4>
+                                <p style="color:var(--text-muted); font-size:0.9rem;">Get email for every new booking</p>
+                            </div>
+                            <div class="toggle-switch active"></div>
+                        </div>
+                    </div>
+                </div>
+
             </main>
         </div>
     </div>
@@ -280,7 +523,118 @@
                     body.classList.toggle('dash-menu-open');
                 });
             }
+            
+            const closeMenuBtn = document.querySelector('.dash-close-menu-btn');
+            if(closeMenuBtn) {
+                closeMenuBtn.addEventListener('click', () => {
+                    body.classList.remove('dash-menu-open');
+                });
+            }
+
+            // Tab Switching Logic
+            const navItems = document.querySelectorAll('.dash-nav-item[data-target]');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Remove active from all tabs and links
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                    // Add active to clicked link
+                    item.classList.add('active');
+
+                    // Show target pane
+                    const targetId = item.getAttribute('data-target');
+                    const targetPane = document.getElementById(targetId);
+                    if(targetPane) {
+                        targetPane.classList.add('active');
+                    }
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        body.classList.remove('dash-menu-open');
+                    }
+                });
+            });
+
+            // Toggle Switches
+            const toggles = document.querySelectorAll('.toggle-switch');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    toggle.classList.toggle('active');
+                });
+            });
+
+            // Load User Name from Local Storage
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                document.getElementById('navUserName').textContent = loggedInUser;
+                document.getElementById('navAvatar').textContent = loggedInUser.charAt(0).toUpperCase();
+            }
+            const loggedInEmail = localStorage.getItem('loggedInEmail');
+            if (loggedInEmail) {
+                const emailElem = document.getElementById('navUserEmail');
+                if(emailElem) emailElem.textContent = loggedInEmail;
+            }
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // Initialize Charts
+        const revenueCtx = document.getElementById('adminRevenueChart');
+        if(revenueCtx) {
+            new Chart(revenueCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Revenue (₹)',
+                        data: [250000, 310000, 280000, 390000, 420000, 380000],
+                        borderColor: '#27ae60',
+                        backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#27ae60',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true } }
+                }
+            });
+        }
+
+        const fleetCtx = document.getElementById('adminFleetChart');
+        if(fleetCtx) {
+            new Chart(fleetCtx, {
+                type: 'polarArea',
+                data: {
+                    labels: ['SUVs', 'Sedans', 'Hatchbacks', 'Luxury'],
+                    datasets: [{
+                        data: [25, 18, 12, 5],
+                        backgroundColor: [
+                            'rgba(46, 204, 113, 0.7)',
+                            'rgba(52, 152, 219, 0.7)',
+                            'rgba(241, 196, 15, 0.7)',
+                            'rgba(155, 89, 182, 0.7)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+        }
     </script>
 </body>
 </html>
