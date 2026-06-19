@@ -966,13 +966,17 @@ html {
 }
 
 /* Scroll Reveal Animations */
-.reveal {
+.reveal, 
+section[class$="-header"] .reveal, 
+section[class$="-hero"] .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal.reveal-active {
+.reveal.reveal-active, 
+section[class$="-header"] .reveal.reveal-active, 
+section[class$="-hero"] .reveal.reveal-active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1343,4 +1347,73 @@ button, a.btn-primary, a.btn-secondary, a.btn-login, input, select, textarea {
 @keyframes slideUpFade {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-beige, #FDFBF7);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+.preloader-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(44, 62, 53, 0.2);
+    border-top: 4px solid var(--primary-green, #2B3D34);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.preloader-car {
+    position: absolute;
+    width: 250px;
+    opacity: 0.8;
+    z-index: 1;
+}
+.left-car {
+    left: 10%;
+    animation: float-left 3s ease-in-out infinite;
+}
+.right-car {
+    right: 10%;
+    animation: float-left 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+@keyframes float-left {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .preloader-car {
+        width: 150px;
+        opacity: 0.3;
+    }
+    .left-car { left: -10%; }
+    .right-car { right: -10%; }
 }

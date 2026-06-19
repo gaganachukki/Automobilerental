@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+    
+        
     <header class="navbar">
         <a href="index.html" class="logo">
             <img src="assets/logo.webp" alt="Automobile Rental Logo" class="nav-logo-img">
@@ -48,8 +50,8 @@
 
     <main>
         <section class="contact-page-header">
-            <h1>Get in Touch</h1>
-            <p>We're here to help you plan your perfect journey.</p>
+            <h1 class="reveal">Get in Touch</h1>
+            <p class="reveal">We're here to help you plan your perfect journey.</p>
         </section>
 
         <section class="contact-container">
@@ -74,7 +76,7 @@
                         </div>
                         <div class="info-text">
                             <h4>Phone</h4>
-                            <p>+1 (800) 555-0198<br>+1 (310) 555-0199</p>
+                            <p>+91 9012345678<br>+91 9876543210</p>
                         </div>
                     </div>
 
@@ -122,50 +124,47 @@
                         <button type="submit" class="btn-submit">Send Message</button>
                     </form>
                 </div>
-
             </div>
         </section>
 
         <script>
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Thank you! Your message has been sent successfully.');
-                this.reset();
+                window.location.href = '404.html';
             });
         </script>
-
         <section class="map-section">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1615358008394!2d78.17140487327917!3d11.682961841822499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1781690474701!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.962057374719!2d77.594562714822!3d12.971598690855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1781690474701!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
         <section class="locations-section">
             <div class="locations-header">
-                <h2>Our Global Presence</h2>
+                <h2>Our Locations</h2>
             </div>
             <div class="locations-grid">
                 <div class="location-card">
-                    <h3>Beverly Hills</h3>
-                    <p>123 Luxury Drive, Suite 500</p>
-                    <p>Los Angeles, CA 90210</p>
+                    <h3>Bangalore</h3>
+                    <p>UB City, Vittal Mallya Road</p>
+                    <p>Bengaluru, KA 560001</p>
                     <p style="margin-top: 1rem; color: var(--primary-green); font-weight: bold;">Flagship Branch</p>
                 </div>
                 <div class="location-card">
-                    <h3>Miami Beach</h3>
-                    <p>456 Ocean Boulevard</p>
-                    <p>Miami, FL 33139</p>
+                    <h3>Hyderabad</h3>
+                    <p>HITEC City, Madhapur</p>
+                    <p>Hyderabad, TS 500081</p>
                     <p style="margin-top: 1rem; color: var(--primary-green); font-weight: bold;">Exotics Hub</p>
                 </div>
                 <div class="location-card">
-                    <h3>New York</h3>
-                    <p>789 Manhattan Ave, Ground Floor</p>
-                    <p>New York, NY 10001</p>
+                    <h3>Chennai</h3>
+                    <p>Express Avenue, Royapettah</p>
+                    <p>Chennai, TN 600014</p>
                     <p style="margin-top: 1rem; color: var(--primary-green); font-weight: bold;">Executive Center</p>
                 </div>
                 <div class="location-card">
-                    <h3>London</h3>
-                    <p>10 Mayfair Place</p>
-                    <p>London W1J 8AJ, UK</p>
-                    <p style="margin-top: 1rem; color: var(--primary-green); font-weight: bold;">International HQ</p>
+                    <h3>Coimbatore</h3>
+                    <p>Avinashi Road, Peelamedu</p>
+                    <p>Coimbatore, TN 641004</p>
+                    <p style="margin-top: 1rem; color: var(--primary-green); font-weight: bold;">Regional Hub</p>
                 </div>
             </div>
         </section>
@@ -243,7 +242,7 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-yellow)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     <div>
                         <strong>Phone Number</strong>
-                        <span>+1 800 555 9999</span>
+                        <span>+91 9012345678</span>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -277,6 +276,9 @@
             }
         });
     </script>
+    
 </body>
 </html>
+
+
 

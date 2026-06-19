@@ -194,9 +194,15 @@
 /* Core Values */
 .core-values {
     padding: 6rem 4rem;
-    background-color: var(--text-white);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/car17.webp') center/cover;
+    background-attachment: fixed;
     text-align: center;
 }
+
+.core-values .why-header h2 {
+    color: var(--text-white);
+}
+
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -205,6 +211,7 @@
     margin: 0 auto;
 }
 .value-card {
+    background-color: var(--text-white);
     padding: 2rem;
     border: 1px solid rgba(43, 61, 52, 0.1);
     border-radius: 12px;
