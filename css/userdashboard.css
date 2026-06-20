@@ -212,7 +212,7 @@ body {
 }
 
 .dash-promo-card {
-    margin-top: auto; margin-bottom: 2rem;
+    margin-top: auto; margin-top: 2rem !important; margin-bottom: 2rem;
     background: linear-gradient(rgba(43, 61, 52, 0.85), rgba(43, 61, 52, 0.95)), url('../assets/car5.webp') center/cover;
     border-radius: 12px;
     padding: 1.5rem;
@@ -238,8 +238,9 @@ body {
     padding: 0.6rem 1rem;
     font-size: 0.85rem;
     width: 100%;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--primary-yellow);
     color: var(--text-dark);
     border-radius: 6px;
@@ -744,8 +745,9 @@ a, button, input { min-height: 44px; }
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 600;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .status-badge.active {
