@@ -40,7 +40,7 @@
 
 /* Our Story Section */
 .our-story {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background-color: var(--bg-beige);
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@
 
 /* Why Choose Us Grid */
 .why-choose-us {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background-color: var(--text-white);
 }
 
@@ -137,7 +137,7 @@
 
 /* Our Team Section */
 .our-team {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background-color: var(--bg-light-beige);
 }
 
@@ -193,7 +193,7 @@
 
 /* Core Values */
 .core-values {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/car17.webp') center/cover;
     background-attachment: fixed;
     text-align: center;
@@ -233,7 +233,7 @@
 
 /* Company Timeline */
 .timeline-section {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background-color: var(--bg-beige);
 }
 .timeline {
@@ -258,6 +258,9 @@
     align-items: center;
     margin-bottom: 3rem;
     position: relative;
+}
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
 .timeline-item:nth-child(even) {
     flex-direction: row-reverse;
@@ -292,7 +295,7 @@
 
 /* Sustainability Commitment */
 .sustainability {
-    padding: 6rem 4rem;
+    padding: 2rem;
     background-color: var(--primary-green);
     color: var(--text-white);
     display: flex;
@@ -301,7 +304,7 @@
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 20px;
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-bottom: 4rem;
 }
 .sustain-content {
@@ -354,7 +357,7 @@
 }
 @media (max-width: 768px) {
     .about-hero, .our-story, .why-choose-us, .our-team {
-        padding: 4rem 2rem;
+        padding: 2.5rem 1.5rem;
     }
     .about-hero h1 {
         font-size: 2.5rem;
@@ -367,7 +370,10 @@
 }
 @media (max-width: 768px) {
     .about-hero { background-attachment: scroll !important; }
-    .about-hero-content { flex-direction: column; text-align: center; }
+    .about-hero-content { flex-direction: column; text-align: center; gap: 1.5rem; }
+    .our-story { gap: 1.5rem; }
+    .why-choose-us { gap: 1.5rem; }
+    .our-team { gap: 1.5rem; }
     .values-grid, .timeline-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .about-hero h1 { font-size: 2.5rem; }
@@ -390,6 +396,27 @@
     .timeline-content {
         width: 100%;
         padding: 1.5rem;
+    }
+
+    /* Sustainability Mobile Fixes */
+    .sustainability {
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        gap: 2rem;
+        text-align: center;
+    }
+    .sustain-stats {
+        justify-content: center;
+    }
+    .sustain-image {
+        width: 100%;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .sustain-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 }
 @media (max-width: 425px) {

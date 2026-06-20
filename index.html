@@ -232,19 +232,31 @@
             </div>
             <div class="steps-container">
                 <div class="step">
-                    <div class="step-number">1</div>
-                    <h4>Select Your Car</h4>
-                    <p>Browse our extensive fleet and choose the vehicle that suits your style.</p>
+                    <div class="step-image-container">
+                        <img src="assets/car16.webp" alt="Select Your Car">
+                    </div>
+                    <div class="step-content">
+                        <h4>Select Your Car</h4>
+                        <p>Browse our extensive fleet and choose the vehicle that suits your style.</p>
+                    </div>
                 </div>
                 <div class="step">
-                    <div class="step-number">2</div>
-                    <h4>Choose Dates & Location</h4>
-                    <p>Pick your preferred dates and a convenient pick-up location.</p>
+                    <div class="step-image-container">
+                        <img src="assets/date.jpg" alt="Choose Dates">
+                    </div>
+                    <div class="step-content">
+                        <h4>Choose Dates & Location</h4>
+                        <p>Pick your preferred dates and a convenient pick-up location.</p>
+                    </div>
                 </div>
                 <div class="step">
-                    <div class="step-number">3</div>
-                    <h4>Book & Drive</h4>
-                    <p>Complete your booking securely and hit the road to create memories.</p>
+                    <div class="step-image-container">
+                        <img src="assets/drive.webp" alt="Book & Drive">
+                    </div>
+                    <div class="step-content">
+                        <h4>Book & Drive</h4>
+                        <p>Complete your booking securely and hit the road to create memories.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -258,12 +270,24 @@
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
                     <p class="review">"Absolutely incredible service. The car was in pristine condition, and the drop-off process was seamless."</p>
-                    <p class="reviewer">- James T.</p>
+                    <div class="reviewer-profile">
+                        <img src="assets/james.webp" alt="James T." class="reviewer-img">
+                        <div class="reviewer-info">
+                            <p class="reviewer-name">James T.</p>
+                            <p class="reviewer-role">Verified Customer</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
                     <p class="review">"Renting a luxury car for our anniversary weekend was the best decision. Outstanding customer support!"</p>
-                    <p class="reviewer">- Sarah M.</p>
+                    <div class="reviewer-profile">
+                        <img src="assets/sarah.webp" alt="Sarah M." class="reviewer-img">
+                        <div class="reviewer-info">
+                            <p class="reviewer-name">Sarah M.</p>
+                            <p class="reviewer-role">Verified Customer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -334,20 +358,52 @@
             </div>
         </section>
 
-        <section class="partners">
+                <section class="partners">
             <p>Trusted By Leading Brands</p>
-            <div class="partners-grid">
-                <div class="partner-logo">
-                    <svg width="120" height="40" viewBox="0 0 120 40" fill="currentColor"><text x="10" y="25" font-family="Arial" font-size="20" font-weight="bold">FORBES</text></svg>
-                </div>
-                <div class="partner-logo">
-                    <svg width="120" height="40" viewBox="0 0 120 40" fill="currentColor"><text x="10" y="25" font-family="Arial" font-size="20" font-weight="bold">VOGUE</text></svg>
-                </div>
-                <div class="partner-logo">
-                    <svg width="120" height="40" viewBox="0 0 120 40" fill="currentColor"><text x="0" y="25" font-family="Arial" font-size="20" font-weight="bold">CONDÉ NAST</text></svg>
-                </div>
-                <div class="partner-logo">
-                    <svg width="120" height="40" viewBox="0 0 120 40" fill="currentColor"><text x="20" y="25" font-family="Arial" font-size="20" font-weight="bold">GQ</text></svg>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Set 1 -->
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 22 22 22"></polygon></svg>
+                        <span>ApexMotors</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+                        <span>GlobalWheels</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                        <span>Velocity</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <span>SecureRide</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>LuxuryClass</span>
+                    </div>
+                    <!-- Set 2 -->
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 22 22 22"></polygon></svg>
+                        <span>ApexMotors</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+                        <span>GlobalWheels</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                        <span>Velocity</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <span>SecureRide</span>
+                    </div>
+                    <div class="partner-logo">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>LuxuryClass</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -418,11 +474,11 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 Automobile Rental. All rights reserved.</p>
+            <p>&copy; 2026 Stackly. All rights reserved.</p>
             <div class="footer-legal">
                 <a href="404.html">Privacy Policy</a>
+                <span class="legal-separator">|</span>
                 <a href="404.html">Terms of Service</a>
-                <a href="404.html">Cookie Policy</a>
             </div>
         </div>
     </footer>

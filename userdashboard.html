@@ -18,11 +18,9 @@
         <header class="dash-navbar">
             <div class="dash-nav-left">
                 <button class="dash-mobile-menu-btn" aria-label="Toggle Menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
                 <a href="index.html" class="dash-nav-logo">
                     <img src="assets/logo.webp" alt="Automobile Rental Logo">
@@ -37,7 +35,6 @@
                 <div class="dash-user-profile">
                     <div class="dash-avatar" id="navAvatar">A</div>
                     <span class="dash-user-name" id="navUserName">Arjun Verma</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </div>
             </div>
         </header>
@@ -45,9 +42,6 @@
         <div class="dash-body">
             <!-- Sidebar -->
             <aside class="dash-sidebar">
-                <button class="dash-close-menu-btn" aria-label="Close menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </button>
                 <ul class="dash-nav-list">
                     <li>
                         <a href="#" class="dash-nav-item active" data-target="dashboard">
@@ -451,9 +445,9 @@
                                 <h4 style="margin-bottom: 0.2rem;">Visa ending in 4242</h4>
                                 <p style="color:var(--text-muted); font-size:0.9rem;">Expires 12/28</p>
                             </div>
-                            <button class="btn-sm" style="background-color: #ff4d4d; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer;">Remove</button>
+                            <button class="btn-sm" style="background-color: #ff4d4d; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer;" onclick="window.location.href='404.html'">Remove</button>
                         </div>
-                        <button type="button" class="btn-primary">+ Add New Card</button>
+                        <button type="button" class="btn-primary" onclick="window.location.href='404.html'">+ Add New Card</button>
                     </div>
                 </div>
 
@@ -504,7 +498,7 @@
                                 <label>Message</label>
                                 <textarea class="dash-form-control" rows="5" placeholder="Describe your issue..."></textarea>
                             </div>
-                            <button type="button" class="btn-primary">Send Message</button>
+                            <button type="button" class="btn-primary" onclick="window.location.href='404.html'">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -522,12 +516,7 @@
                 });
             }
             
-            const closeMenuBtn = document.querySelector('.dash-close-menu-btn');
-            if(closeMenuBtn) {
-                closeMenuBtn.addEventListener('click', () => {
-                    body.classList.remove('dash-menu-open');
-                });
-            }
+
 
             // Tab Switching Logic
             const navItems = document.querySelectorAll('.dash-nav-item[data-target]');

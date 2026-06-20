@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     padding: 0 4rem;
     background: linear-gradient(rgba(11, 15, 12, 0.6), rgba(11, 15, 12, 0.6)), url('../assets/hero4.webp') no-repeat center center / cover;
     background-attachment: fixed;
@@ -38,7 +38,7 @@
 }
 
 .services-container {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background-color: var(--bg-beige);
 }
 
@@ -51,10 +51,12 @@
 }
 
 .service-item {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
     background-color: var(--text-white);
     border-radius: 16px;
-    padding: 3rem 2rem;
-    text-align: center;
+    padding: 2rem 1.5rem;
+    text-align: left;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     border-bottom: 4px solid transparent;
@@ -74,7 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 0 1.5rem 0;
     color: var(--primary-green);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -115,7 +117,7 @@
 .corporate-partnerships {
     background-color: var(--primary-green);
     color: var(--text-white);
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     display: flex;
     align-items: center;
     gap: 4rem;
@@ -161,9 +163,9 @@
 
 /* Premium Add-On Options */
 .premium-addons {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background-color: var(--text-white);
-    text-align: center;
+    text-align: left;
 }
 .addons-header h2 {
     font-family: var(--font-heading);
@@ -196,7 +198,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 0 1.5rem 0;
     color: var(--primary-green);
 }
 .addon-card h4 {
@@ -211,7 +213,7 @@
 
 /* The Chauffeur Experience */
 .chauffeur-experience {
-    padding: 6rem 4rem;
+    padding: 4.5rem 2rem;
     background-color: var(--bg-beige);
 }
 .chauffeur-header {
@@ -234,7 +236,7 @@
 .step {
     flex: 1;
     min-width: 250px;
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 .step-number {
@@ -248,7 +250,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 0 1.5rem 0;
     position: relative;
     z-index: 2;
 }
@@ -266,7 +268,7 @@
 /* Responsive */
 @media (max-width: 768px) {
     .services-container {
-        padding: 4rem 2rem;
+        padding: 2.5rem 1.5rem;
     }
     .services-page-header h1 {
         font-size: 2.5rem;
@@ -280,7 +282,107 @@
 @media (max-width: 768px) {
     .services-page-header { background-attachment: scroll !important; }
     .services-grid, .addons-grid, .steps-grid { grid-template-columns: 1fr; }
-    .corporate-content { flex-direction: column; text-align: center; gap: 2rem; }
+    .corporate-content { flex-direction: column; text-align: left; gap: 2rem; }
     .corporate-image, .corporate-text { width: 100%; }
     .services-hero h1 { font-size: 2.5rem; }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-item:nth-child(1) { animation-delay: 0.1s; }
+.service-item:nth-child(2) { animation-delay: 0.2s; }
+.service-item:nth-child(3) { animation-delay: 0.3s; }
+.service-item:nth-child(4) { animation-delay: 0.4s; }
+.service-item:nth-child(5) { animation-delay: 0.5s; }
+.service-item:nth-child(6) { animation-delay: 0.6s; }
+
+.experience-steps .step {
+    padding: 2rem;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+.experience-steps .step:nth-child(1) { animation-delay: 0.1s; }
+.experience-steps .step:nth-child(2) { animation-delay: 0.2s; }
+.experience-steps .step:nth-child(3) { animation-delay: 0.3s; }
+
+/* Strong overrides for service card sizes */
+.services-grid .service-item {
+    padding: 1.5rem 1.5rem !important;
+}
+
+.services-grid .service-icon {
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 0 1rem 0 !important;
+}
+
+.services-grid .service-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.services-grid .service-item h3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.services-grid .service-item p {
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.5 !important;
+}
+
+.addons-header, .chauffeur-header {
+    text-align: center !important;
+}
+
+/* Fix Corporate Partnerships spacing and image height */
+.corporate-partnerships {
+    padding: 3rem 2rem !important;
+}
+
+.corp-image img {
+    height: 350px !important;
+    object-fit: cover !important;
+}
+
+@media (max-width: 768px) {
+    .corporate-partnerships {
+        padding: 2.5rem 1.5rem !important;
+    }
+    .corp-image img {
+        height: 250px !important;
+    }
+}
+
+/* Fix services page header alignment and mobile padding */
+.services-page-header {
+    text-align: center !important;
+}
+
+@media (max-width: 768px) {
+    .services-page-header {
+        padding: 0 1.5rem !important;
+    }
+}
+
+/* Fix Corporate Partnerships mobile layout */
+@media (max-width: 768px) {
+    .corporate-partnerships {
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    .corp-content, .corp-image {
+        width: 100% !important;
+    }
 }
