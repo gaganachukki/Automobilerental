@@ -1297,3 +1297,10 @@ body {
     align-items: center !important;
     justify-content: center !important;
 }
+
+@media (max-width: 768px) {
+    .dash-user-name, 
+    .admin-profile-details {
+        display: none !important;
+    }
+}
