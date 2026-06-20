@@ -21,6 +21,8 @@ body {
 
 /* Dashboard Navbar */
 .dash-navbar {
+    position: absolute !important;
+    
     height: var(--navbar-height);
     background-color: var(--primary-green);
     display: flex;
@@ -680,6 +682,10 @@ body {
     z-index: 1001;
 }
 
+.dash-sidebar-close-btn {
+    display: none;
+}
+
 .dash-mobile-menu-btn span {
     display: block;
     width: 25px;
@@ -789,6 +795,8 @@ a, button, input { min-height: 44px; }
 
 @media (max-width: 768px) {
     .dash-navbar {
+    position: absolute !important;
+    
         left: 0;
     }
     .dash-mobile-menu-btn { display: block; z-index: 10; }
@@ -814,8 +822,9 @@ a, button, input { min-height: 44px; }
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
         z-index: 999;
         transform: translateX(-100%);
         transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
@@ -831,11 +840,24 @@ a, button, input { min-height: 44px; }
         display: none;
     }
     
+    .dash-sidebar-close-btn {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-white);
+        cursor: pointer;
+        z-index: 1005;
+    }
+
     body.dash-menu-open .dash-navbar {
-        z-index: 1000;
-        background-color: transparent;
-        border-bottom: none;
-        box-shadow: none;
+    position: absolute !important;
+    
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
     
     body.dash-menu-open .dash-nav-logo,
@@ -847,8 +869,8 @@ a, button, input { min-height: 44px; }
     }
 
     body.dash-menu-open .dash-mobile-menu-btn {
-        position: relative;
-        z-index: 1001;
+        opacity: 0;
+        pointer-events: none;
     }
     
     /* Center the nav list */
@@ -939,7 +961,9 @@ a, button, input { min-height: 44px; }
 
 @media (max-width: 425px) {
     .dash-header h1 { font-size: 1.8rem; }
-    .dash-navbar { padding: 0 1rem; }
+    .dash-navbar {
+    position: absolute !important;
+     padding: 0 1rem; }
 }
 
 
@@ -1183,3 +1207,155 @@ a, button, input { min-height: 44px; }
     body.dash-menu-open .dash-nav-item:nth-child(7) { animation-delay: 0.4s; }
     body.dash-menu-open .dash-nav-item:nth-child(8) { animation-delay: 0.45s; }
     body.dash-menu-open .dash-logout { animation-delay: 0.5s; }
+
+/* ==============================================================
+   REDESIGN OVERRIDES (Premium Glassmorphism & Modern Layout)
+   ============================================================== */
+
+body {
+    background: linear-gradient(135deg, #f6f8fb 0%, #eef1f5 100%) !important;
+}
+
+/* Floating Sidebar */
+.dash-sidebar {
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    background: rgba(18, 22, 25, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* Floating Navbar */
+.dash-navbar {
+    position: absolute !important;
+    
+    top: 1.5rem !important;
+    right: 1.5rem !important;
+    left: calc(var(--sidebar-width) + 1.5rem) !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fix navbar text colors since background is now light */
+.dash-nav-title, .dash-notifications, .dash-user-profile {
+    color: var(--text-dark) !important;
+}
+.dash-avatar {
+    background-color: var(--primary-green) !important;
+    color: white !important;
+}
+
+/* Main Content Adjustment */
+.dash-main {
+    margin-top: 1rem !important;
+}
+
+/* Premium Dashboard Cards */
+.stat-card {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.dash-section {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Icons styling */
+.stat-icon {
+    border-radius: 16px !important;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.5rem 1rem !important;
+    border-radius: 30px !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Form controls */
+.dash-form-control {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    border-radius: 12px !important;
+    background: rgba(255,255,255,0.7) !important;
+    transition: all 0.3s ease !important;
+}
+.dash-form-control:focus {
+    background: #fff !important;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.1) !important;
+    border-color: var(--primary-green) !important;
+}
+
+/* Buttons */
+.btn-primary, .btn-rent, .btn-view-booking {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    transition: all 0.3s ease !important;
+}
+.btn-primary:hover, .btn-rent:hover, .btn-view-booking:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Mobile Adjustments for Redesign */
+@media (max-width: 768px) {
+    .dash-sidebar {
+        left: -100% !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        height: 100vh !important;
+        border-radius: 0 !important;
+        width: 100vw !important;
+    }
+    body.dash-menu-open .dash-sidebar {
+        left: 0 !important;
+    }
+    .dash-navbar {
+    position: absolute !important;
+    
+        left: 1rem !important;
+        right: 1rem !important;
+    }
+    .dash-mobile-menu-btn span {
+        background-color: var(--text-dark) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .dash-sidebar-close-btn {
+        left: 1.5rem !important;
+        right: auto !important;
+    }
+}
+
+.btn-sm { display: inline-flex !important; align-items: center !important; justify-content: center !important; line-height: 1 !important; }
+
+.dash-user-profile {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+.admin-profile-details {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
