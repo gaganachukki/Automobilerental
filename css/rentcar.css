@@ -72,7 +72,8 @@
 
 .rental-img img {
     width: 100%;
-    height: 220px;
+    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -280,14 +281,14 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .rental-fleet { padding: 3rem 1rem; }
     .rental-page-header { padding: 4rem 1rem 2rem; background-attachment: scroll !important; }
     
     .rental-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     
     .rental-card { flex-direction: column; }
-    .rental-img { width: 100%; height: 200px; }
+    .rental-img { width: 100%; }
     .rental-details { width: 100%; }
     .rental-actions { flex-direction: column; }
     .btn-book { width: 100%; text-align: center; justify-content: center; }

@@ -850,7 +850,7 @@ html {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
@@ -1151,7 +1151,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-login, input, select, textarea {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .navbar {
         padding: 0.75rem 0.5rem;
     }
@@ -1181,8 +1181,8 @@ button, a.btn-primary, a.btn-secondary, a.btn-login, input, select, textarea {
     }
     
     .tech-center-ring {
-        width: 280px;
-        height: 280px;
+        width: min(280px, 80vw);
+        height: min(280px, 80vw);
         margin-bottom: 1rem;
         box-shadow: 0 0 40px rgba(232, 188, 68, 0.4), inset 0 0 20px rgba(232, 188, 68, 0.2);
     }
@@ -1549,7 +1549,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-login, input, select, textarea {
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .preloader-car {
         width: 150px;
         opacity: 0.3;
@@ -1617,7 +1617,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-login, input, select, textarea {
 
 
 /* Fullscreen Mobile Menu Overrides */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
     .nav-links {
         width: 100vw !important;
         height: 100vh !important;
@@ -1646,7 +1646,7 @@ button, a.btn-primary, a.btn-secondary, a.btn-login, input, select, textarea {
     
     .nav-links a.mobile-only-login {
         justify-content: center !important;
-        min-width: 250px !important;
+        width: 250px !important;
         margin-top: 1rem !important;
     }
     

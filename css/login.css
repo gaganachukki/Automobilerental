@@ -441,7 +441,7 @@ body {
     .hero-text h1 { font-size: 2.5rem; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     body { overflow-y: auto; height: auto; }
     .login-layout { flex-direction: column; height: auto; min-height: 100vh; }
     .login-left { display: none; /* Hide image side on mobile */ }

@@ -329,7 +329,7 @@
         height: 300px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .blog-container {
         padding: 2.5rem 1.5rem;
     }
@@ -342,7 +342,7 @@
 @media (max-width: 1024px) {
     .blog-grid { gap: 1.5rem; }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .blog-page-header { background-attachment: scroll !important; }
     .blog-grid, .category-grid { grid-template-columns: 1fr; }
     .featured-post-card { flex-direction: column; }

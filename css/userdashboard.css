@@ -793,7 +793,7 @@ a, button, input { min-height: 44px; }
     .dash-main { padding: 2rem; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .dash-navbar {
     position: absolute !important;
     
@@ -1317,7 +1317,7 @@ body {
 }
 
 /* Mobile Adjustments for Redesign */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .dash-sidebar {
         left: -100% !important;
         top: 0 !important;
@@ -1340,7 +1340,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .dash-sidebar-close-btn {
         left: 1.5rem !important;
         right: auto !important;
@@ -1366,7 +1366,7 @@ body {
     justify-content: center !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .dash-user-name, 
     .admin-profile-details {
         display: none !important;

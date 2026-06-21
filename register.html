@@ -75,7 +75,7 @@
                     <div class="form-group">
                         <label for="password">Password</label>
                         <div class="password-wrapper">
-                            <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+                            <input type="password" id="password" class="form-control" placeholder="••••••••" minlength="6" required>
                             <button type="button" class="toggle-pwd" title="Toggle Password Visibility">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                             </button>
@@ -85,7 +85,7 @@
                     <div class="form-group">
                         <label for="confirm-password">Confirm Password</label>
                         <div class="password-wrapper">
-                            <input type="password" id="confirm-password" class="form-control" placeholder="••••••••" required>
+                            <input type="password" id="confirm-password" class="form-control" placeholder="••••••••" minlength="6" required>
                             <button type="button" class="toggle-pwd" title="Toggle Password Visibility">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                             </button>
@@ -128,6 +128,33 @@
                     togglePwd.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
                 }
             });
+        });
+
+        // 1. Name Validation: Allow only letters and spaces
+        document.getElementById('name').addEventListener('input', function() {
+            this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+        });
+
+        // 2. Password Match Validation
+        const pwd = document.getElementById('password');
+        const confirmPwd = document.getElementById('confirm-password');
+
+        function validatePassword() {
+            if (pwd.value !== confirmPwd.value) {
+                confirmPwd.setCustomValidity("Passwords do not match");
+            } else {
+                confirmPwd.setCustomValidity('');
+            }
+        }
+
+        pwd.addEventListener('input', validatePassword);
+        confirmPwd.addEventListener('input', validatePassword);
+
+        // Simulation for successful registration submit
+        document.querySelector('.register-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Just redirect to login
+            window.location.href = 'login.html';
         });
     </script>
     
