@@ -1149,7 +1149,7 @@ body {
 }
 
 /* Fix navbar text colors since background is now light */
-.dash-nav-title, .dash-notifications, .dash-user-profile {
+.dash-nav-title, .dash-notifications, .dash-user-profile, .dash-user-name, .dash-user-email {
     color: var(--text-dark) !important;
 }
 .dash-avatar {

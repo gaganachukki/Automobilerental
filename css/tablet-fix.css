@@ -1,0 +1,79 @@
+/* Tablet View Fixes (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Global layout adjustments to prevent stretching */
+    .features, .steps-container, .why-grid, .team-grid, .values-grid, .partner-logos {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    .feature-card, .step, .why-card, .team-member, .value-card {
+        flex: 0 0 calc(50% - 2rem) !important;
+        max-width: calc(50% - 2rem) !important;
+    }
+
+    .feature-divider { display: none !important; }
+    
+    .fleet-grid, .faq-grid, .destinations-grid, .rental-grid, .requirements-grid, 
+    .addons-grid, .services-grid, .steps-grid, .stats-grid, .dash-grid, .admin-grid, 
+    .dash-content-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid !important;
+        flex-direction: unset !important;
+    }
+    
+    .app-promo, .sustainability, .corporate-content, .our-story {
+        flex-direction: row !important;
+        align-items: center !important;
+        text-align: left !important;
+    }
+
+    .app-promo-content, .app-promo-image, .sustain-content, .sustain-image,
+    .story-content, .story-image {
+        flex: 1 !important;
+        width: 50% !important;
+    }
+    
+    .req-item, .addon-item {
+        flex-direction: row !important;
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+    
+
+    
+    /* Animation and alignment enhancements for tablet */
+    .feature-card, .step, .why-card, .team-member, .value-card, .car-card {
+        transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+    }
+    .feature-card:hover, .step:hover, .why-card:hover, .team-member:hover, .value-card:hover, .car-card:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* Form grids in tablet */
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .about-hero-content {
+        flex-direction: row !important;
+        text-align: left !important;
+        align-items: center !important;
+    }
+    /* Center the 3rd odd item in 2-column grids */
+    .fleet-grid > :nth-child(3):last-child,
+    .destinations-grid > :nth-child(3):last-child {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+        width: calc(50% - 1rem) !important;
+    }
+    
+    /* Promo App buttons yellow color */
+    .app-btn {
+        background-color: var(--primary-yellow) !important;
+    }
+    .app-btn:hover {
+        background-color: #d6ad3d !important;
+    }
+    }
